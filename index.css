@@ -1,7 +1,9 @@
 header {
-    top: 0;
+    position: fixed;
+    top: 0; /*remember to add position fixed*/
 }
 
 footer {
+    position: fixed;
     bottom: 0;
 }
