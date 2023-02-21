@@ -26,18 +26,18 @@
             <div>
                 <h1>Log ind</h1>
                 <p>Log ind med din e-mail</p>
-                <form>
+<!--                dont refresh page when click on submit-->
+                <form onsubmit="return false">
                     <label for="userMail">Mail:</label>
-                    <input type="text" id="userMail" name="userMail">
+                    <input type="text" id="userMail" name="userMail" value="peter">
 
                     <label for="userPassword">Password:</label>
-                    <input type="text" id="userPassword" name="userPassword">
+                    <input type="text" id="userPassword" name="userPassword" value="hej">
 
-                    <input type="submit" value="Log ind" class="loginButton">
+                    <input type="submit" value="Log ind" class="loginButton" onclick="submitLoginForm()">
                     <!--Add the submitted data to an array-->
-                    <input type="checkbox">
+                    <input type="checkbox" id="rememberMe">
                 </form>
-
             </div>
         </div>
     </div>
