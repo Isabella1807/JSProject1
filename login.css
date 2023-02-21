@@ -67,6 +67,12 @@
     padding: 0;
 }
 
+.extraLoginItems {
+    display: grid;
+    grid-template-columns: 1fr 4fr 4fr;
+
+}
+
 
 @media only screen and (min-width:1000px){
     #loginContainer .loginBox{
