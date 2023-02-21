@@ -1,0 +1,39 @@
+#loginContainer{
+    background-color: rgba(20,20,20,0);
+
+    /*Make the container fullscreen*/
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /* Place content in center of screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Move login container behind main instead of using "display none", as animation would not show before container was hidden */
+    z-index: -999;
+    overflow: hidden;
+}
+
+#loginContainer.loginVisible {
+    /* When container is visible: dark transparent background color and move in front of everything */
+    background-color: rgba(20,20,20,0.3);
+    z-index: 99999;
+}
+
+#loginContainer .asdasdasd {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+
+    /* Start box below visible screen window, and animate it into the window on container visible */
+    transform: translateY(100vh);
+    transition: all 1s;
+}
+
+#loginContainer.loginVisible .asdasdasd {
+    transform: translateY(0);
+}

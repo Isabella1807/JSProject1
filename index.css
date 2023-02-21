@@ -3,10 +3,10 @@ html {
     padding: 0;
 }
 
-header {
-    position: fixed; /*Always at the top of Viewport*/
-    top: 0; /*remember to add position fixed, else top and bottom dont work*/
-}
+/*header {*/
+/*    position: fixed; !*Always at the top of Viewport*!*/
+/*    top: 0; !*remember to add position fixed, else top and bottom dont work*!*/
+/*}*/
 
 footer {
     position: static; /*Relative to the content*/

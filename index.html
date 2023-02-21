@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <title>index</title>
     <link rel="stylesheet" href="index.css">
-    <script src="loginFunction.js"></script>
+    <link rel="stylesheet" href="login.css">
+    <script src="loginFunction.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 <body>
     <header>
-        <button id="loginButton" type="button">Opret/login</button>
+        <button id="loginButton" onclick="showLoginContainer()">Opret/login</button>
         <button id="pakkepostButton" type="button">Pakkepost</button>
         <button id="createAnnonce" type="button">+ Opret annonce</button>
 
@@ -28,6 +29,11 @@
             </div>
         </div>
     </header>
+
+    <!-- gets class loginVisible in JS -->
+    <section id="loginContainer" class="loginVisible" onclick="hideLoginContainer()">
+        <div class="asdasdasd">dffsd</div>
+    </section>
 
     <main>
     </main>
