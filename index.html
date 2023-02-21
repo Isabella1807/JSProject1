@@ -13,21 +13,6 @@
     <button id="loginButton" onclick="showLoginContainer()">Opret/login</button>
     <button id="pakkepostButton" type="button">Pakkepost</button>
     <button id="createAnnonce" type="button">+ Opret annonce</button>
-
-    <div id="box" style="width:100px;"> <!--Jquery animate w3school - maybe to get it to slide in from bottom-->
-        <div>
-            <form>
-                <label for="userMail">Mail:</label>
-                <input type="text" id="userMail" name="userMail"><br><br>
-
-                <label for="userPassword">Password:</label>
-                <input type="text" id="userPassword" name="userPassword"><br><br>
-
-                <input type="submit" value="Submit">
-                <!--Add the submitted data to an array-->
-            </form>
-        </div>
-    </div>
 </header>
 
 <!-- gets class loginVisible in JS -->
@@ -38,6 +23,22 @@
         <div class="loginImageContainer">
         </div>
         <div class="formContainer">
+            <div>
+                <h1>Log ind</h1>
+                <p>Log ind med din e-mail</p>
+                <form>
+                    <label for="userMail">Mail:</label>
+                    <input type="text" id="userMail" name="userMail">
+
+                    <label for="userPassword">Password:</label>
+                    <input type="text" id="userPassword" name="userPassword">
+
+                    <input type="submit" value="Log ind" class="loginButton">
+                    <!--Add the submitted data to an array-->
+                    <input type="checkbox">
+                </form>
+
+            </div>
         </div>
     </div>
 </section>

@@ -43,17 +43,18 @@
     transform: translateY(100vh);
     transition: transform 1s;
 
-    display: flex;
+    /*formcontainer took up more space  with grid flex when i set padding, changed to grid flex*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .loginImageContainer{
-    flex: 1;
     background-color: lightskyblue;
 }
 
 .formContainer{
-    flex: 1;
     background-color: lime;
+    padding: 80px;
 }
 
 #loginContainer.loginVisible .loginBox {
