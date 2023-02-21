@@ -24,16 +24,36 @@
     z-index: 99999;
 }
 
-#loginContainer .asdasdasd {
-    width: 100px;
-    height: 100px;
+#loginContainer .loginBox {
     background-color: pink;
+    width: 100%;
+    height: 100%;
 
     /* Start box below visible screen window, and animate it into the window on container visible */
     transform: translateY(100vh);
-    transition: all 1s;
+    transition: transform 1s;
+
+    display: flex;
 }
 
-#loginContainer.loginVisible .asdasdasd {
+.loginImageContainer{
+    flex: 1;
+    background-color: lightskyblue;
+}
+
+.formContainer{
+    flex: 1;
+    background-color: lime;
+}
+
+#loginContainer.loginVisible .loginBox {
     transform: translateY(0);
+}
+
+
+@media only screen and (min-width:1000px){
+    #loginContainer .loginBox{
+        width: 1000px;
+        height: 800px;
+    }
 }
