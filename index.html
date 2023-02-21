@@ -10,13 +10,19 @@
 </head>
 <body>
 <header>
-    <button id="loginButton" onclick="showLoginContainer()">Opret/login</button>
-    <button id="pakkepostButton" type="button">Pakkepost</button>
-    <button id="createAnnonce" type="button">+ Opret annonce</button>
+    <div id="logoContainer">
+        <img src="images/gulogGratis.png" alt="gul og gratis logo" width="" height="">
+    </div>
+    <input type="text" placeholder="Søg på GulogGratis">
+    <div id="headerButtons">
+        <button id="loginButton" onclick="showLoginContainer()">Opret/login</button>
+        <button id="pakkepostButton" type="button">Pakkepost</button>
+        <button id="createAnnonce" type="button">+ Opret annonce</button>
+    </div>
 </header>
 
 <!-- gets class loginVisible in JS -->
-<section id="loginContainer" class="loginVisible">
+<section id="loginContainer" class="">
 <!--    background is separate div, to avoid clicking on content to close-->
     <div class="clickBackground" onclick="hideLoginContainer()"></div>
     <div class="loginBox">
@@ -26,7 +32,7 @@
             <div>
                 <h1>Log ind</h1>
                 <p>Log ind med din e-mail</p>
-<!--                dont refresh page when click on submit-->
+                <!--dont refresh page when click on submit-->
                 <form onsubmit="return false">
 
                     <input type="text" id="userMail" name="userMail" placeholder="E-mail" oninput="setErrorMessage('')">

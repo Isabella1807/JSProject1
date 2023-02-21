@@ -1,3 +1,20 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+header {
+    position: fixed;
+    width: 100%;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    box-shadow: 0 2px 6px 0 rgb(46 46 46/20%);
+}
+
 #loginContainer{
     /*Make the container fullscreen*/
     width: 100vw;
@@ -70,9 +87,7 @@
 .extraLoginItems {
     display: grid;
     grid-template-columns: 1fr 4fr 4fr;
-
 }
-
 
 @media only screen and (min-width:1000px){
     #loginContainer .loginBox{
