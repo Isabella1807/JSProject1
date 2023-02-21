@@ -23,4 +23,4 @@ function showLoginContainer(){
 
 function hideLoginContainer(){
     loginContainer.classList.remove("loginVisible");
-}
+}s

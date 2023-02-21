@@ -1,6 +1,4 @@
 #loginContainer{
-    background-color: rgba(20,20,20,0);
-
     /*Make the container fullscreen*/
     width: 100vw;
     height: 100vh;
@@ -18,9 +16,21 @@
     overflow: hidden;
 }
 
+#loginContainer .clickBackground {
+    background-color: rgba(20,20,20,0);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#loginContainer.loginVisible .clickBackground {
+    background-color: rgba(20,20,20,0.3);
+}
+
 #loginContainer.loginVisible {
     /* When container is visible: dark transparent background color and move in front of everything */
-    background-color: rgba(20,20,20,0.3);
     z-index: 99999;
 }
 

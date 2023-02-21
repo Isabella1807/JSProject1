@@ -6,45 +6,47 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="login.css">
     <script src="loginFunction.js" defer></script>
-<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>-->
+    <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>-->
 </head>
 <body>
-    <header>
-        <button id="loginButton" onclick="showLoginContainer()">Opret/login</button>
-        <button id="pakkepostButton" type="button">Pakkepost</button>
-        <button id="createAnnonce" type="button">+ Opret annonce</button>
+<header>
+    <button id="loginButton" onclick="showLoginContainer()">Opret/login</button>
+    <button id="pakkepostButton" type="button">Pakkepost</button>
+    <button id="createAnnonce" type="button">+ Opret annonce</button>
 
-        <div id="box" style="width:100px;"> <!--Jquery animate w3school - maybe to get it to slide in from bottom-->
-            <div>
-                <form>
-                    <label for="userMail">Mail:</label>
-                    <input type="text" id="userMail" name="userMail"><br><br>
+    <div id="box" style="width:100px;"> <!--Jquery animate w3school - maybe to get it to slide in from bottom-->
+        <div>
+            <form>
+                <label for="userMail">Mail:</label>
+                <input type="text" id="userMail" name="userMail"><br><br>
 
-                    <label for="userPassword">Password:</label>
-                    <input type="text" id="userPassword" name="userPassword"><br><br>
+                <label for="userPassword">Password:</label>
+                <input type="text" id="userPassword" name="userPassword"><br><br>
 
-                    <input type="submit" value="Submit">
-                    <!--Add the submitted data to an array-->
-                </form>
-            </div>
+                <input type="submit" value="Submit">
+                <!--Add the submitted data to an array-->
+            </form>
         </div>
-    </header>
+    </div>
+</header>
 
-    <!-- gets class loginVisible in JS -->
-    <section id="loginContainer" class="loginVisible" onclick="hideLoginContainer()">
-        <div class="loginBox">
-            <div class="loginImageContainer">
-            </div>
-            <div class="formContainer">
-            </div>
+<!-- gets class loginVisible in JS -->
+<section id="loginContainer" class="loginVisible">
+<!--    background is separate div, to avoid clicking on content to close-->
+    <div class="clickBackground" onclick="hideLoginContainer()"></div>
+    <div class="loginBox">
+        <div class="loginImageContainer">
         </div>
-    </section>
+        <div class="formContainer">
+        </div>
+    </div>
+</section>
 
-    <main>
-    </main>
+<main>
+</main>
 
-    <footer>
-        <p>&copy Camille, Regitze & Isa</p>
-    </footer>
+<footer>
+    <p>&copy Camille, Regitze & Isa</p>
+</footer>
 </body>
 </html>
