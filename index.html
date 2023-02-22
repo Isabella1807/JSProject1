@@ -12,26 +12,34 @@
 <body>
 <header>
     <div id="headerItems">
-    <div id="logoContainer">
-        <img src="images/gulogGratis.png" alt="gul og gratis logo" width="" height="">
-    </div>
-    <input type="text" placeholder="Søg på GulogGratis">
-    <div id="headerButtons">
-        <button id="loginButton" class="greyButton" onclick="showLoginContainer()">Opret/login</button>
-        <button id="pakkepostButton" class="greyButton" type="button">Pakkepost</button>
-        <button id="createAnnonce" type="button">+ Opret annonce</button>
-    </div>
+        <div id="logoContainer">
+            <img src="images/gulogGratis.png" alt="gul og gratis logo" width="" height="">
+        </div>
+        <input type="text" placeholder="Søg på GulogGratis">
+        <div id="headerButtons">
+            <button id="loginButton" class="greyButton" onclick="showLoginContainer()">Opret/login</button>
+            <button id="pakkepostButton" class="greyButton" type="button">Pakkepost</button>
+            <button id="createAnnonce" type="button">+ Opret annonce</button>
+        </div>
     </div>
 </header>
 
 <!-- gets class loginVisible in JS -->
-<section id="loginContainer" class="">
-<!--    background is separate div, to avoid clicking on content to close-->
+<section id="loginContainer" class="loginVisible">
+    <!--    background is separate div, to avoid clicking on content to close-->
     <div class="clickBackground" onclick="hideLoginContainer()"></div>
     <div class="loginBox">
         <div class="loginImageContainer">
+            <div class="gradientOverlay"></div>
+            <div class="loginTextContainer">
+                <div class="loginImageText">
+                    <p>Velkommen tilbage</p>
+                    <h1>Mere end 450.000 varer venter på at blive købt</h1>
+                </div>
+            </div>
         </div>
         <div class="formContainer">
+            <button id="closeLogin" type="button">x</button>
             <div>
                 <h1>Log ind</h1>
                 <p>Log ind med din e-mail</p>
@@ -53,7 +61,6 @@
                 </form>
                 <div id="errorMessageContainer">
                 </div>
-
             </div>
         </div>
     </div>
