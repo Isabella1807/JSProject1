@@ -48,9 +48,15 @@
                 <!--dont refresh page when click on submit-->
                 <form onsubmit="return false">
                     <div class="formButtons">
-                        <input type="text" id="userMail" name="userMail" placeholder="E-mail" oninput="setErrorMessage('')">
-                        <input type="text" id="userPassword" name="userPassword" placeholder="Adgangskode">
-                        <input type="submit" value="Log ind" class="loginButton" onclick="submitLoginForm()">
+                        <div id="inputMail">
+                            <input type="text" id="userMail" name="userMail" placeholder="E-mail" style="padding: 12px 20px" oninput="setErrorMessage('')">
+                        </div>
+                        <div id="inputPassword">
+                            <input type="password" id="userPassword" name="userPassword" placeholder="Adgangskode" style="padding: 12px 20px">
+                        </div>
+                        <div id="inputSubmit">
+                            <input type="submit" value="Log ind" class="loginButton" onclick="submitLoginForm()" style="padding: 12px 20px">
+                        </div>
                     </div>
                     <div class="extraLoginItems">
                         <input type="checkbox" id="rememberMe">

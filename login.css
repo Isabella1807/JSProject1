@@ -1,7 +1,8 @@
-header{
+header {
     box-sizing: border-box;
 }
-#loginContainer{
+
+#loginContainer {
     /*Make the container fullscreen*/
     width: 100%;
     height: 100vh;
@@ -21,7 +22,7 @@ header{
 }
 
 #loginContainer .clickBackground {
-    background-color: rgba(20,20,20,0);
+    background-color: rgba(20, 20, 20, 0);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -30,7 +31,7 @@ header{
 }
 
 #loginContainer.loginVisible .clickBackground {
-    background-color: rgba(20,20,20,0.3);
+    background-color: rgba(20, 20, 20, 0.3);
 }
 
 #loginContainer.loginVisible {
@@ -54,7 +55,7 @@ header{
     z-index: 1001;
 }
 
-.loginImageContainer{
+.loginImageContainer {
     background-image: url("images/tekopper.webp");
     border-radius: 20px 0 0 20px;
     background-repeat: no-repeat;
@@ -79,34 +80,77 @@ header{
     color: white;
 }
 
-.formContainer{
+.formContainer {
     padding: 60px; /*changed from 80px to 60px*/
     background-color: white;
     border-radius: 0 20px 20px 0;
 }
 
-.formContainer h1{
+.formContainer h1 {
     font-size: 36px;
     font-weight: 400;
     color: #2e2e2e;
-    margin: 10px 0px;
+    margin: 10px 0;
 }
-.formContainer p{
+
+.formContainer p {
     font-size: 20px;
     color: #2e2e2e;
     font-weight: 400;
 }
 
-.formButtons input{
+.formButtons input {
+    box-sizing: border-box;
     width: 100%;
-    background-color: #e8f0fe;
     border: none;
-    border-radius: 10px;
     font-size: 16px;
-    margin: 10px;
 }
 
-.closeLogin{
+#inputMail {
+    margin-top: 60px;
+}
+
+#inputMail input {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+
+#inputPassword {
+    margin-top: 8px;
+}
+
+#inputPassword input {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+
+#inputSubmit {
+    margin-top: 40px;
+}
+
+#inputSubmit input {
+    background-color: #fbd01e;
+    border-radius: 10px;
+}
+
+#inputSubmit input:hover {
+    cursor: pointer;
+}
+
+.extraLoginItems {
+    margin-top: 20px;
+}
+
+.extraLoginItems a {
+    text-decoration: none;
+    color: #2e2e2e;
+}
+
+.extraLoginItems input, label {
+    cursor: pointer;
+}
+
+.closeLogin {
     position: absolute;
     right: 5%;
     top: 5%
@@ -122,7 +166,7 @@ header{
     font-size: 25px;
 }
 
-.formContainer button:hover{
+.formContainer button:hover {
     border-radius: 5px;
     background-color: #f4f4f4;
     cursor: pointer;
@@ -132,7 +176,7 @@ header{
     width: 100%;
     height: 100%;
     border-radius: inherit;
-    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5))
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5))
 }
 
 #loginContainer.loginVisible .loginBox {
@@ -150,8 +194,8 @@ header{
     grid-template-columns: 1fr 4fr 4fr;
 }
 
-@media only screen and (min-width:1000px){
-    #loginContainer .loginBox{
+@media only screen and (min-width: 1000px) {
+    #loginContainer .loginBox {
         width: 1000px;
         height: 60%; /*changed from 800px to 60% cause the div was too big on smaller screens*/
     }
