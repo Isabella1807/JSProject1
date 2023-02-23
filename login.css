@@ -1,3 +1,6 @@
+header{
+    box-sizing: border-box;
+}
 #loginContainer{
     /*Make the container fullscreen*/
     width: 100%;
@@ -14,6 +17,7 @@
     /* Move login container behind main instead of using "display none", as animation would not show before container was hidden */
     z-index: -999;
     overflow: hidden;
+
 }
 
 #loginContainer .clickBackground {
@@ -39,12 +43,14 @@
     height: 100%;
 
     /* Start box below visible screen window, and animate it into the window on container visible */
-    transform: translateY(100vh);
+    transform: translateY(200vh); /*Sizes different on smaller screens, changed the number from 100 to 200*/
     transition: transform 1s;
 
-    /*formcontainer took up more space  with grid flex when i set padding, changed to grid flex*/
+    /*formcontainer took up more space  with grid flex when i set padding, changed to grid template*/
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    box-sizing: border-box;
 }
 
 .loginImageContainer{
@@ -65,14 +71,37 @@
 }
 
 .loginImageText{
-    padding: 40px;
+    padding: 80px;
 }
 
 .formContainer{
-    padding: 80px;
+    padding: 60px; /*changed from 80px to 60px*/
     background-color: white;
     border-radius: 0 20px 20px 0;
 }
+
+.closeLogin{
+    position: absolute;
+    right: 5%;
+    top: 5%
+}
+
+.formContainer button {
+    border: none;
+    width: 2.5%;
+    height: 5%;
+    background-color: transparent;
+    color: #888;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.formContainer button:hover{
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+
 .gradientOverlay {
     width: 100%;
     height: 100%;
@@ -95,17 +124,9 @@
     grid-template-columns: 1fr 4fr 4fr;
 }
 
-/*.loginBox {*/
-/*    border-radius: 20px;*/
-/*}*/
-
-/*.closeLogin {*/
-
-/*}*/
-
 @media only screen and (min-width:1000px){
     #loginContainer .loginBox{
         width: 1000px;
-        height: 800px;
+        height: 75%; /*changed from 800px to 75% cause the div was too big on smaller screens*/
     }
 }

@@ -39,16 +39,14 @@
             </div>
         </div>
         <div class="formContainer">
-            <button id="closeLogin" type="button">x</button>
+            <button class="closeLogin" type="button" onclick="hideLoginContainer()">x</button>
             <div>
                 <h1>Log ind</h1>
                 <p>Log ind med din e-mail</p>
                 <!--dont refresh page when click on submit-->
                 <form onsubmit="return false">
-
                     <input type="text" id="userMail" name="userMail" placeholder="E-mail" oninput="setErrorMessage('')">
                     <input type="text" id="userPassword" name="userPassword" placeholder="Adgangskode">
-
                     <input type="submit" value="Log ind" class="loginButton" onclick="submitLoginForm()">
                     <!--Add the submitted data to an array-->
 
@@ -57,10 +55,9 @@
                         <label for="rememberMe">Husk mig</label>
                         <a href="#">Glemt adgangskode</a>
                     </div>
-
                 </form>
-                <div id="errorMessageContainer">
-                </div>
+
+                <div id="errorMessageContainer"></div>
             </div>
         </div>
     </div>
