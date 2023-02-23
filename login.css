@@ -15,7 +15,7 @@ header{
     align-items: center;
 
     /* Move login container behind main instead of using "display none", as animation would not show before container was hidden */
-    z-index: -999;
+    z-index: -1000;
     overflow: hidden;
 
 }
@@ -35,7 +35,7 @@ header{
 
 #loginContainer.loginVisible {
     /* When container is visible: dark transparent background color and move in front of everything */
-    z-index: 99999;
+    z-index: 1002;
 }
 
 #loginContainer .loginBox {
@@ -51,6 +51,7 @@ header{
     grid-template-columns: 1fr 1fr;
 
     box-sizing: border-box;
+    z-index: 1001;
 }
 
 .loginImageContainer{
@@ -65,13 +66,17 @@ header{
     width: 100%;
     font-size: 20px;
     font-weight: 700;
-    color: white;
     position: absolute;
     bottom: 0;
 }
 
-.loginImageText{
+.loginImageText {
     padding: 80px;
+}
+
+.loginImageText h1,
+.loginImageText p {
+    color: white;
 }
 
 .formContainer{
@@ -80,14 +85,25 @@ header{
     border-radius: 0 20px 20px 0;
 }
 
+.formContainer h1{
+    font-size: 36px;
+    font-weight: 400;
+    color: #2e2e2e;
+    margin: 10px 0px;
+}
+.formContainer p{
+    font-size: 20px;
+    color: #2e2e2e;
+    font-weight: 400;
+}
+
 .formButtons input{
     width: 100%;
-    height: 100%;
     background-color: #e8f0fe;
     border: none;
     border-radius: 10px;
     font-size: 16px;
-    margin: 20px;
+    margin: 10px;
 }
 
 .closeLogin{
@@ -98,12 +114,12 @@ header{
 
 .formContainer button {
     border: none;
-    width: 2.5%;
-    height: 5%;
+    width: 4%;
+    height: 4%;
     background-color: transparent;
     color: #888;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .formContainer button:hover{
@@ -137,6 +153,6 @@ header{
 @media only screen and (min-width:1000px){
     #loginContainer .loginBox{
         width: 1000px;
-        height: 75%; /*changed from 800px to 75% cause the div was too big on smaller screens*/
+        height: 60%; /*changed from 800px to 60% cause the div was too big on smaller screens*/
     }
 }

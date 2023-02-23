@@ -44,14 +44,13 @@
             <button class="closeLogin" type="button" onclick="hideLoginContainer()">x</button>
             <div>
                 <h1>Log ind</h1>
-                <p>Log ind med din e-mail</p>
+                <p>Log ind med din e-mail.</p>
                 <!--dont refresh page when click on submit-->
                 <form onsubmit="return false">
                     <div class="formButtons">
                         <input type="text" id="userMail" name="userMail" placeholder="E-mail" oninput="setErrorMessage('')">
                         <input type="text" id="userPassword" name="userPassword" placeholder="Adgangskode">
                         <input type="submit" value="Log ind" class="loginButton" onclick="submitLoginForm()">
-                        <!--Add the submitted data to an array-->
                     </div>
                     <div class="extraLoginItems">
                         <input type="checkbox" id="rememberMe">
@@ -70,7 +69,7 @@
     <div class="center">
         <button class="button button1">12px</button>
 
-        <h1>Things to sale</h1>
+        <h1 id="mainPageHeader">Things to sale</h1>
 
 
         <!-- The grid: four columns -->
