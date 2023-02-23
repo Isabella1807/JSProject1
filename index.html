@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>index</title>
+    <title>GulOgGratisKopi</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="menu.css">
     <script src="loginFunction.js" defer></script>
+    <script src="menu.js" defer></script>
     <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>-->
 </head>
 <body>
@@ -46,8 +48,7 @@
                 <!--dont refresh page when click on submit-->
                 <form onsubmit="return false">
                     <div class="formButtons">
-                        <input type="text" id="userMail" name="userMail" placeholder="E-mail"
-                               oninput="setErrorMessage('')">
+                        <input type="text" id="userMail" name="userMail" placeholder="E-mail" oninput="setErrorMessage('')">
                         <input type="text" id="userPassword" name="userPassword" placeholder="Adgangskode">
                         <input type="submit" value="Log ind" class="loginButton" onclick="submitLoginForm()">
                         <!--Add the submitted data to an array-->
