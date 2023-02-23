@@ -46,10 +46,11 @@
                 <!--dont refresh page when click on submit-->
                 <form onsubmit="return false">
                     <div class="formButtons">
-                    <input type="text" id="userMail" name="userMail" placeholder="E-mail" oninput="setErrorMessage('')">
-                    <input type="text" id="userPassword" name="userPassword" placeholder="Adgangskode">
-                    <input type="submit" value="Log ind" class="loginButton" onclick="submitLoginForm()">
-                    <!--Add the submitted data to an array-->
+                        <input type="text" id="userMail" name="userMail" placeholder="E-mail"
+                               oninput="setErrorMessage('')">
+                        <input type="text" id="userPassword" name="userPassword" placeholder="Adgangskode">
+                        <input type="submit" value="Log ind" class="loginButton" onclick="submitLoginForm()">
+                        <!--Add the submitted data to an array-->
                     </div>
                     <div class="extraLoginItems">
                         <input type="checkbox" id="rememberMe">
@@ -65,60 +66,60 @@
 </section>
 
 <main>
-   <div class="center">	
-	<button class="button button1">12px</button>
-	
-	<h1>Things to sale</h1>
+    <div class="center">
+        <button class="button button1">12px</button>
 
-	
-<!-- The grid: four columns -->
-<div class="row">
-  <div class="column">
-    <img src="images/p1.jpg" alt="Car<br>1000kr" onclick="myFunction(this);">
-	    <div class="desc">Car<br>1000kr</div>
-  </div>
-  <div class="column">
-    <img src="images/p2.jpg" alt="Soldat<br>50kr" onclick="myFunction(this);">
-	  <div class="desc">Soldat<br>50kr</div>
-  </div>
-  <div class="column">
-    <img src="images/p3.jpg" alt="New Car<br>25000kr" onclick="myFunction(this);">
-	    <div class="desc">New Car<br>25000kr</div>
-  </div>
-  <div class="column">
-    <img src="images/p4.jpg" alt="Tree table<br>500kr" onclick="myFunction(this);">
-	    <div class="desc">Tree table<br>500kr</div>
-  </div>
-	<div class="column">
-    <img src="images/p5.jpg" alt="Big Car<br>50.000kr" onclick="myFunction(this);">
-		  <div class="desc">Big Car<br>50.000kr</div>
-  </div>
-	<div class="column">
-    <img src="images/p6.jpg" alt="Weet Car<br>40.000kr" onclick="myFunction(this);">
-		  <div class="desc">Weet Car<br>40.000kr</div>
-  </div>
-	<div class="column">
-    <img src="images/p7.jpg" alt="Horse Trailer<br>15.000kr" onclick="myFunction(this);">
-		  <div class="desc">Horse Trailer<br>15.000kr</div>
-  </div>
-	<div class="column">
-    <img src="images/p8.jpg" alt="Toy Car<br>500kr" onclick="myFunction(this);">
-		  <div class="desc">Toy Car<br>500kr</div>
-  </div>
-</div>
+        <h1>Things to sale</h1>
 
-<!-- The expanding image container -->
-<div class="container">
-  <!-- Close the image -->
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
 
-  <!-- Expanded image -->
-  <img id="expandedImg" style="width:100%">
+        <!-- The grid: four columns -->
+        <div class="row">
+            <div class="column">
+                <img src="images/p1.jpg" alt="Car<br>1000kr" onclick="myFunction(this);">
+                <div class="desc">Car<br>1000kr</div>
+            </div>
+            <div class="column">
+                <img src="images/p2.jpg" alt="Soldat<br>50kr" onclick="myFunction(this);">
+                <div class="desc">Soldat<br>50kr</div>
+            </div>
+            <div class="column">
+                <img src="images/p3.jpg" alt="New Car<br>25000kr" onclick="myFunction(this);">
+                <div class="desc">New Car<br>25000kr</div>
+            </div>
+            <div class="column">
+                <img src="images/p4.jpg" alt="Tree table<br>500kr" onclick="myFunction(this);">
+                <div class="desc">Tree table<br>500kr</div>
+            </div>
+            <div class="column">
+                <img src="images/p5.jpg" alt="Big Car<br>50.000kr" onclick="myFunction(this);">
+                <div class="desc">Big Car<br>50.000kr</div>
+            </div>
+            <div class="column">
+                <img src="images/p6.jpg" alt="Weet Car<br>40.000kr" onclick="myFunction(this);">
+                <div class="desc">Weet Car<br>40.000kr</div>
+            </div>
+            <div class="column">
+                <img src="images/p7.jpg" alt="Horse Trailer<br>15.000kr" onclick="myFunction(this);">
+                <div class="desc">Horse Trailer<br>15.000kr</div>
+            </div>
+            <div class="column">
+                <img src="images/p8.jpg" alt="Toy Car<br>500kr" onclick="myFunction(this);">
+                <div class="desc">Toy Car<br>500kr</div>
+            </div>
+        </div>
 
-  <!-- Image text -->
-  <div id="imgtext"></div>
-</div>
-</div
+        <!-- The expanding image container -->
+        <div class="container">
+            <!-- Close the image -->
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+            <!-- Expanded image -->
+            <img id="expandedImg" style="width:100%">
+
+            <!-- Image text -->
+            <div id="imgtext"></div>
+        </div>
+    </div>
 </main>
 
 <footer>
