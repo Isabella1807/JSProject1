@@ -28,6 +28,19 @@ function hideLoginContainer() {
     loginContainer.classList.remove("loginVisible");
 }
 
+function findUserByMail(mail) {
+    let foundUser = null;
+
+    for (let i = 0; i < users.length; i++) {
+        if (users[i].mail === mail) {
+            foundUser = users[i]; //since im changing this variable it will give an error, unless the variable type is let
+            break;
+        }
+    }
+
+    return foundUser; //stops the function and returns
+}
+
 function submitLoginForm() {
     const userMail = document.getElementById("userMail").value;
     const userPassword = document.getElementById("userPassword").value;
@@ -39,10 +52,10 @@ function submitLoginForm() {
         setErrorMessage("Felter ikke udfyldt");
     } else {
         const user = findUserByMail(userMail);
-        if (user === null){
+        if (user === null) {
             setErrorMessage("Vi kan ikke logge dig ind. E-mail og/eller adgangskode er ikke korrekt.");
         } else {
-            if (userPassword !== user.password){
+            if (userPassword !== user.password) {
                 setErrorMessage("Vi kan ikke logge dig ind. E-mail og/eller adgangskode er ikke korrekt.");
             } else {
                 hideLoginContainer();
@@ -60,15 +73,49 @@ function setErrorMessage(errorMessage) {
     }
 }
 
-function findUserByMail (mail) {
-    let foundUser = null;
 
-    for (let i = 0; i < users.length; i++) {
-        if (users[i].mail === mail) {
-            foundUser = users[i]; //since im changing this variable it will give an error, unless the variable type is let
-            break;
-        }
+function showUsers() {
+    console.log("i am showing users");
+    console.log(users);
+}
+
+const skio = document.getElementById("skio");
+const skiu = document.getElementById("skiu");
+
+function pushUser() {
+    let skioValue = skio.value;
+    let skiuValue = skiu.value;
+
+    if (skioValue === "") {
+        return;
     }
 
-    return foundUser;
+    if (skiuValue === "") {
+        return;
+    }
+
+    console.log("I am pushing users to array");
+
+    let newUser = {
+        mail: skioValue,
+        password: skiuValue,
+    };
+
+    users.push(newUser);
+
+    skio.value = '';
+    skiu.value = '';
+}
+
+const myDomElement = {
+    innerText: 'Hej jeg er overskriften',
+    innerHTML: '<span>Hej</span> jeg er overskriftten',
+    disabled: false,
+    value: 'myEmail.com',
+    id: 'hey',
+    push: function() {}
+};
+
+if (myDomElement.value === '') {
+    myDomElement.push();
 }
