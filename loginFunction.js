@@ -20,10 +20,10 @@ const users = [{
 
 const loginContainer = document.getElementById("loginContainer");
 
+//Show and hide function for login
 function showLoginContainer() {
     loginContainer.classList.add("loginVisible");
 }
-
 function hideLoginContainer() {
     loginContainer.classList.remove("loginVisible");
 }

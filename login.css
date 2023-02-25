@@ -18,7 +18,6 @@ header {
     /* Move login container behind main instead of using "display none", as animation would not show before container was hidden */
     z-index: -1000;
     overflow: hidden;
-
 }
 
 #loginContainer .clickBackground {
@@ -84,6 +83,7 @@ header {
     padding: 60px; /*changed from 80px to 60px*/
     background-color: white;
     border-radius: 0 20px 20px 0;
+    overflow-y: auto;
 }
 
 .formContainer h1 {
@@ -152,22 +152,17 @@ header {
 
 .closeLogin {
     position: absolute;
-    right: 5%;
-    top: 5%
-}
-
-.formContainer button {
+    right: 15px;
+    top: 15px;
     border: none;
-    width: 4%;
-    height: 4%;
     background-color: transparent;
     color: #888;
     font-weight: 400;
     font-size: 25px;
+    padding: 5px 12px;
 }
-
-.formContainer button:hover {
-    border-radius: 5px;
+.closeLogin:hover{
+    border-radius: 10px;
     background-color: #f4f4f4;
     cursor: pointer;
 }
@@ -208,6 +203,18 @@ header {
 @media only screen and (min-width: 1000px) {
     #loginContainer .loginBox {
         width: 1000px;
-        height: 60%; /*changed from 800px to 60% cause the div was too big on smaller screens*/
+        height: 80%; /*was 800px before. 60% now cause the div was too big on smaller screens*/
     }
+    #errorMessageContainer {
+        margin-top: 30px;
+    }
+    #errorMessageContainer h1{
+        font-weight: 400;
+        font-size: 30px;
+    }
+    #errorMessageContainer p{
+        font-size: 20px;
+    }
+
+
 }
