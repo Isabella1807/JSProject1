@@ -33,18 +33,24 @@ function submitLoginForm() {
     const userPassword = document.getElementById("userPassword").value;
     const rememberMe = document.getElementById("rememberMe").checked;
 
+    // Empty error message box
     setErrorMessage("");
 
+    // Check that form is filled correct before looking up user in "database"
     if (userMail === "" || userPassword === "") {
         setErrorMessage("Felter ikke udfyldt");
     } else {
+        // Form is filled correct. Find user in "database"
         const user = findUserByMail(userMail);
+        // Check whether a user was found at all
         if (user === null){
             setErrorMessage("Vi kan ikke logge dig ind. E-mail og/eller adgangskode er ikke korrekt.");
         } else {
+            // A user was found. Check if passwords match
             if (userPassword !== user.password){
                 setErrorMessage("Vi kan ikke logge dig ind. E-mail og/eller adgangskode er ikke korrekt.");
             } else {
+                // Passwords match; Login: success
                 hideLoginContainer();
             }
         }
@@ -54,13 +60,15 @@ function submitLoginForm() {
 //error message recipe
 function setErrorMessage(errorMessage) {
     if (errorMessage === "") {
+        // Set error message box to empty if string in parameter is an empty string
         document.getElementById("errorMessageContainer").innerHTML = "";
     } else {
+        // Otherwise, set error message box content to a generic headline and a custom paragraph containing the content of the parameter
         document.getElementById("errorMessageContainer").innerHTML = "<h1>Der opstod en fejl</h1><p>" + errorMessage + "</p>";
     }
 }
 
-function findUserByMail (mail) {
+function findUserByMail (mail) { //inputting mail
     let foundUser = null;
 
     for (let i = 0; i < users.length; i++) {
@@ -69,6 +77,5 @@ function findUserByMail (mail) {
             break;
         }
     }
-
-    return foundUser;
+    return foundUser; //returns user, if found
 }
