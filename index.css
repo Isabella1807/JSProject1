@@ -27,6 +27,30 @@ main{
 	text-transform: capitalize;
 }
 
+.image-container {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+.image-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - (1.5rem * (var(--per-view) - 1))) / var(--per-view));
+    grid-gap: 1.5rem;
+    position: relative;
+    left: 0;
+    transition: .3s;
+}
+.image-wrapper > * {
+    aspect-ratio: 4 / 3;
+}
+img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    border-radius: .5rem;
+}
+
 div.desc {
   	padding: 2px;
   	text-align: center;
@@ -37,25 +61,59 @@ div.desc {
 }
 
 .button {
-  	background-color: white;
-  	padding: 10px 400px 10px 10px;
+  	padding: 10px;
+	width: 500px;
   	text-align: left;
   	text-decoration: none;
   	display: inline-block;
   	font-size: 16px;
   	margin: 4px 2px;
-	background: linear-gradient(120deg, red 10px, white);
+	background: white;
+	border-radius: 12px;
 }
 
 .button1 {
-	border-radius: 12px;
-	
+	box-shadow:  6px 0 0 0 red;
+}
+.button2 {
+	box-shadow:  6px 0 0 0 black;
+}
+.button3 {
+	box-shadow:  6px 0 0 0 yellow;
+}
+.button4 {
+	box-shadow:  6px 0 0 0 blue;
+}
+.button5 {
+	box-shadow:  6px 0 0 0 green;
+}
+.button6 {
+	box-shadow:  6px 0 0 0  aqua;
+}
+
+.button7 {
+	box-shadow:  6px 0 0 0 bisque;
+}
+.button8 {
+	box-shadow:  6px 0 0 0 darkmagenta;
+}
+.button9 {
+	box-shadow:  6px 0 0 0 darkolivegreen;
+}
+.button10 {
+	box-shadow:  6px 0 0 0 darkviolet;
+}
+.button11 {
+	box-shadow:  6px 0 0 0 lawngreen;
+}
+.button12 {
+	box-shadow:  6px 0 0 0 lightpink;
 }
 /* The grid: Four equal columns that floats next to each other */
 
 .column {
   float: left;
-  width: 260px;
+  width: 250px;
   padding: 5px;
 }
 
